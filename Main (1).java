@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        double horas = 48;
+        double valorHora = 5000;
+        double retencionPorcentaje = 0.125;
+
+        double salarioBruto = horas * valorHora;
+        double retencion = salarioBruto * retencionPorcentaje;
+        double salarioNeto = salarioBruto - retencion;
+
+        System.out.println("Salario bruto: " + salarioBruto);
+        System.out.println("Retención: " + retencion);
+        System.out.println("Salario neto: " + salarioNeto);
+    }
+}
