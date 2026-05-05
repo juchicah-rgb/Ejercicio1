@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+class Mat {
+    double num;
+
+    Mat(double num) {
+        this.num = num;
+    }
+
+    double cubo(){
+        return Math.pow(this.num, 3);
+    }
+    
+    double cuado(){
+        return Math.pow(this.num, 2);
+    }
+
+    
+
+    void resultado() {
+        double cubo = this.cubo();
+        double cuado = this.cuado();
+
+        System.out.println("Cuadrado " + cuado);
+        System.out.println("Cubo " + cubo);
+    }
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingrese numero: ");
+        int num = sc.nextInt();
+
+        Mat e1 = new Mat(num); // crear objeto
+        e1.resultado(); // lanzar rsultado
+
+        sc.close();
+    }
+}
