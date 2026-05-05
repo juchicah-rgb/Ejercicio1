@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+class Mat {
+    double num;
+
+    // Constructor
+    Mat(double num) {
+        this.num = num;
+    }
+    // operaciones
+    double Area() {
+        return Math.PI * Math.pow(this.num, 2);
+    }
+    
+    double Longitud() {
+        return 2 * Math.PI * this.num;
+    }
+
+
+    //Resultado
+    void resultado() {
+        double Area = this.Area();
+        double Longitud = this.Longitud();
+
+        System.out.println("Area " + Area);
+        System.out.println("Longitud " + Longitud);
+    }
+}
+
+public class MyClass {
+    public static void main(String args[]) {
+
+        Scanner sc = new Scanner(System.in);
+        
+        String opcion = "si"; 
+
+        while (opcion.equalsIgnoreCase("si")) {
+            System.out.print("Ingrese Radio: ");
+            double num = sc.nextDouble();
+
+            Mat e1 = new Mat(num);  
+            e1.resultado();
+            
+            System.out.print("¿Quieres continuar? (si/no): ");
+            opcion = sc.next();
+        }
+
+        sc.close();
+    }
+}
